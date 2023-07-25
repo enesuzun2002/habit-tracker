@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:habit_tracker/model/habit.dart';
+import 'package:habit_tracker/test_data.dart';
 
 class HabitListTile extends StatefulWidget {
-  const HabitListTile({super.key});
+  final HabitModel item;
+  const HabitListTile({super.key, required this.item});
 
   @override
   State<HabitListTile> createState() => _HabitListTileState();
 }
 
 class _HabitListTileState extends State<HabitListTile> {
-  bool isCompleted = false;
-
   @override
   Widget build(BuildContext context) {
     return CheckboxListTile(
-      value: isCompleted,
-      title: const Text("Habit - 1"),
-      subtitle: const Text("Habit - 1 Description"),
+      value: widget.item.isCompleted,
+      title: Text(widget.item.name),
+      subtitle: Text(widget.item.description),
       onChanged: (value) {
-        isCompleted = value!;
+        widget.item.isCompleted = value!;
         setState(() {});
       },
     );
