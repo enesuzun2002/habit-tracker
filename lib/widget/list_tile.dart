@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/model/habit.dart';
-import 'package:habit_tracker/test_data.dart';
 
 class HabitListTile extends StatefulWidget {
   final HabitModel item;

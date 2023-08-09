@@ -63,6 +63,5 @@ class AddHabitBottomSheet extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
