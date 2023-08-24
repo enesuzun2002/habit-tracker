@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habit_tracker/view/habit.dart';
+import 'package:habit_tracker/view/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        inputDecorationTheme: InputDecorationTheme(
+            filled: true,
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(20.0))),
       ),
-      home: const HabitView(),
+      home: const LoginView(),
     );
   }
 }
